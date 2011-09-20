@@ -1,3 +1,4 @@
+let &runtimepath='~/.vim,' . &runtimepath
 source ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
