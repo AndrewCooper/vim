@@ -1,6 +1,17 @@
-let &runtimepath='~/.vim,' . &runtimepath
-source ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
+
+" Vundle Plugins
+set nocompatible                        " required
+filetype off                            " required
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()                     " Start Vundle
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'vim-scripts/c.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+call vundle#end()                       " End Vundle
+filetype plugin indent on               " Reset indenting
 
 " 1 important
 " 2 moving around, searching and patterns
@@ -920,4 +931,10 @@ set history=50
 "       set bl  nobl
 "debug  set to "msg" to see all error messages
 "       set debug=1 important
+
+"Key Maps
+map! <S-Insert> <C-r>+
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+
+
 
